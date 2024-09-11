@@ -1,1 +1,62 @@
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Mic, Search } from "lucide-react"
 
+export default function Component() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <header className="p-4 flex justify-end space-x-4">
+        <a href="#" className="text-sm">Gmail</a>
+        <a href="#" className="text-sm">Images</a>
+        <button className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600">
+          A
+        </button>
+      </header>
+      
+      <main className="flex-grow flex flex-col items-center justify-center px-4">
+        <div className="text-8xl font-bold mb-8">
+          <span className="text-blue-500">G</span>
+          <span className="text-red-500">o</span>
+          <span className="text-yellow-500">o</span>
+          <span className="text-blue-500">g</span>
+          <span className="text-green-500">l</span>
+          <span className="text-red-500">e</span>
+        </div>
+        
+        <div className="w-full max-w-2xl">
+          <div className="relative">
+            <Input 
+              className="w-full h-12 pl-4 pr-12 rounded-full border-2 border-gray-200 focus:border-gray-300 focus:outline-none focus:ring-0"
+              placeholder="Search Google or type a URL"
+            />
+            <div className="absolute right-0 top-0 h-full flex items-center pr-4 space-x-2">
+              <Mic className="w-5 h-5 text-gray-500" />
+              <Search className="w-5 h-5 text-blue-500" />
+            </div>
+          </div>
+          
+          <div className="mt-6 flex justify-center space-x-4">
+            <Button variant="outline">Google Search</Button>
+            <Button variant="outline">I'm Feeling Lucky</Button>
+          </div>
+        </div>
+      </main>
+      
+      <footer className="p-4 bg-gray-100 text-sm text-gray-600">
+        <div className="flex justify-between">
+          <div className="space-x-4">
+            <a href="#">About</a>
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search works</a>
+          </div>
+          <div className="space-x-4">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
